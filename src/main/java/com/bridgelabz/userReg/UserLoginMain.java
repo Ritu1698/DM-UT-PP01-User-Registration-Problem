@@ -34,6 +34,20 @@ public class UserLoginMain {
             return false;
     }
 
+    public static boolean PasswordValidator(String password)
+    {
+        String y="^(?=.*[A-Z])(?=.*\\d)(?=.*[^\\dA-Z]).{8,}$";
+        String y1="^[0-9a-zA-Z]*[@#$%][0-9a-zA-Z]*$";
+        Pattern pattern = Pattern.compile(y);
+        Pattern pattern1 = Pattern.compile(y1);
+        Matcher matcher =  pattern.matcher(password);
+        Matcher matcher1 =  pattern1.matcher(password);
+        if(matcher.find()&&matcher1.find())
+            return true;
+        else
+            return false;
+    }
+
 
 
 

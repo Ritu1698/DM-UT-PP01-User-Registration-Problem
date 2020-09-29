@@ -172,6 +172,59 @@ public class UserLoginTest {
         boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
         Assert.assertEquals(false,validity_check);
     }
+    //--------------------------PASSWORD CHECKING------------------------
+    @Test
+    public void givenPassword_whenValid_shouldReturnTrue(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String password ="InDiA@123";
+        boolean validity_check= userLoginMain.PasswordValidator(password);
+        Assert.assertEquals(true,validity_check);
+    }
+    @Test
+    public void givenPassword_whenLessThan8Length_whenInvalid_shouldReturnFalse(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String password ="InDiA@";
+        boolean validity_check= userLoginMain.PasswordValidator(password);
+        Assert.assertEquals(false,validity_check);
+    }
+    @Test
+    public void givenPassword_whenNoCapsCharGiven_whenInvalid_shouldReturnFalse(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String password ="india@123";
+        boolean validity_check= userLoginMain.PasswordValidator(password);
+        Assert.assertEquals(false,validity_check);
+    }
+    @Test
+    public void givenPassword_whenNoSpecialCharGiven_whenInvalid_shouldReturnFalse(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String password ="India123";
+        boolean validity_check= userLoginMain.PasswordValidator(password);
+        Assert.assertEquals(false,validity_check);
+    }
+    @Test
+    public void givenPassword_whenMoreThan1SpecialCharGiven_whenInvalid_shouldReturnFalse(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String password ="India@#123";
+        boolean validity_check= userLoginMain.PasswordValidator(password);
+        Assert.assertEquals(false,validity_check);
+    }
+    @Test
+    public void givenPassword_whenNoNumberGiven_whenInvalid_shouldReturnFalse(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String password ="India@home";
+        boolean validity_check= userLoginMain.PasswordValidator(password);
+        Assert.assertEquals(false,validity_check);
+    }
+    @Test
+    public void givenPassword_whenNoNumberAndCapsCharGiven_whenInvalid_shouldReturnFalse(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String password ="@jhkgkjhjgj";
+        boolean validity_check= userLoginMain.PasswordValidator(password);
+        Assert.assertEquals(false,validity_check);
+    }
+
+
+
 
 
 
