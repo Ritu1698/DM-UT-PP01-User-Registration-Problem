@@ -19,7 +19,7 @@ public class UserLoginTest {
         public void givenFirstname_whenlessThan3Char_whenInvalid_shouldReturnFalse()
         {
             UserLoginMain userLoginMain = new UserLoginMain();
-            String firstname1 = "Rit";
+            String firstname1 = "Ri";
             boolean validity_check1= userLoginMain.FirstNameValidator(firstname1);
             Assert.assertEquals(false,validity_check1);
         }
@@ -58,6 +58,7 @@ public class UserLoginTest {
             boolean validity_check= userLoginMain.FirstNameValidator(firstname);
             Assert.assertEquals(false,validity_check);
         }
+
 
 
 }
