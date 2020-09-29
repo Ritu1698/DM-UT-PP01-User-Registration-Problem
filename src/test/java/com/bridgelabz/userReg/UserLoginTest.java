@@ -19,10 +19,14 @@ public class UserLoginTest {
         public void givenFirstname_whenInvalid_shouldReturnFalse()
         {
             UserLoginMain userLoginMain = new UserLoginMain();
-            String firstname = "rit";
-            boolean validity_check= userLoginMain.FirstNameValidator(firstname);
-            Assert.assertEquals(false,validity_check);
+            String firstname1 = "rit";
+            String firstname2 ="rituparna";
+            boolean validity_check1= userLoginMain.FirstNameValidator(firstname1);
+            Assert.assertEquals(false,validity_check1);
+            boolean validity_check2= userLoginMain.FirstNameValidator(firstname2);
+            Assert.assertEquals(false,validity_check2);
 
         }
+
 
 }
