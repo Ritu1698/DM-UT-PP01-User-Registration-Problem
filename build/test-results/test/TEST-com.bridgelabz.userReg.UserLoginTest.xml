@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.userReg.UserLoginTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-09-29T14:12:36" hostname="LAPTOP-RGI87V6B" time="0.01">
+<testsuite name="com.bridgelabz.userReg.UserLoginTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-09-29T14:30:32" hostname="LAPTOP-RGI87V6B" time="0.009">
   <properties/>
-  <testcase name="givenFirstname_whenInvalid_shouldReturnFalse" classname="com.bridgelabz.userReg.UserLoginTest" time="0.01">
-    <failure message="java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;
+  <testcase name="givenFirstname_whenNumberAdded_whenInvalid_shouldReturnFalse" classname="com.bridgelabz.userReg.UserLoginTest" time="0.009">
+    <failure message="java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
 	at org.junit.Assert.assertEquals(Assert.java:118)
 	at org.junit.Assert.assertEquals(Assert.java:144)
-	at com.bridgelabz.userReg.UserLoginTest.givenFirstname_whenInvalid_shouldReturnFalse(UserLoginTest.java:27)
+	at com.bridgelabz.userReg.UserLoginTest.givenFirstname_whenNumberAdded_whenInvalid_shouldReturnFalse(UserLoginTest.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -57,8 +57,7 @@
 	at java.lang.Thread.run(Thread.java:748)
 </failure>
   </testcase>
-  <system-out><![CDATA[Invalid first name
-Invalid first name
+  <system-out><![CDATA[Valid first Name
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

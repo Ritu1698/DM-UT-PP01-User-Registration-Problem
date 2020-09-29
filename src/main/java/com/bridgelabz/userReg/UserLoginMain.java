@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 public class UserLoginMain {
     public static boolean FirstNameValidator(String name)
     {
-        String y="^[A-Z]{1}(?=.*[a-z]).{2,}$";
+        String y="^[A-Z]{1}[a-z]{2,}$";
         Pattern pattern = Pattern.compile(y);
         Matcher matcher =  pattern.matcher(name);
         boolean found = false;
