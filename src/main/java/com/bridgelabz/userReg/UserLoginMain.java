@@ -8,18 +8,14 @@ public class UserLoginMain {
         String y="^[A-Z]{1}[a-z]{2,}$";
         Pattern pattern = Pattern.compile(y);
         Matcher matcher =  pattern.matcher(name);
-        boolean found = false;
-        while (matcher.find())
-        {
-            System.out.println("Valid first Name");
-            found = true;
-        }
-        if(!found)
-        {
-            System.out.println("Invalid first name");
+        if(matcher.find())
+            return true;
+        else
+            return false;
 
-        }
-        return found;
 
     }
+
+
+
 }
