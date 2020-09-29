@@ -23,6 +23,16 @@ public class UserLoginMain {
         else
             return false;
     }
+    public static boolean PhoneNumberValidator(String name)
+    {
+        String y="^\\d{2}(\\s{1}\\d{10})$";
+        Pattern pattern = Pattern.compile(y);
+        Matcher matcher =  pattern.matcher(name);
+        if(matcher.find())
+            return true;
+        else
+            return false;
+    }
 
 
 

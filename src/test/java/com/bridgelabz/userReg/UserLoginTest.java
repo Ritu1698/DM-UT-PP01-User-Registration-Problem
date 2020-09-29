@@ -111,6 +111,69 @@ public class UserLoginTest {
         boolean validity_check= userLoginMain.LastNameValidator(firstname);
         Assert.assertEquals(false,validity_check);
     }
+    //-------------------PHONENUMBER CHECKING------------------------
+    @Test
+    public void givenPhoneNumber_whenValid_shouldReturnTrue(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String phoneNo ="91 9223322244";
+        boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+        Assert.assertEquals(true,validity_check);
+    }
+    @Test
+    public void givenPhoneNumber_whenNoCodeGiven_whenInvalid_shouldReturnTrue(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String phoneNo ="9223322244";
+        boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+        Assert.assertEquals(false,validity_check);
+    }
+
+    @Test
+    public void givenPhoneNumber_whenNoSpaceGiven_whenInvalid_shouldReturnTrue(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String phoneNo ="919223322244";
+        boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+        Assert.assertEquals(false,validity_check);
+    }
+
+    @Test
+    public void givenPhoneNumber_whenMoreSpaceGiven_whenInvalid_shouldReturnTrue(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String phoneNo ="91  9223322244";
+        boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+        Assert.assertEquals(false,validity_check);
+    }
+
+    @Test
+    public void givenPhoneNumber_whenLessThan10DigitsGiven_whenInvalid_shouldReturnTrue(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String phoneNo ="91 92233222";
+        boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+        Assert.assertEquals(false,validity_check);
+    }
+    @Test
+    public void givenPhoneNumber_whenMoreThan10DigitsGiven_whenInvalid_shouldReturnTrue(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String phoneNo ="91 922332224455";
+        boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+        Assert.assertEquals(false,validity_check);
+    }
+
+    @Test
+    public void givenPhoneNumber_whenAlphabetsGiven_whenInvalid_shouldReturnTrue(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String phoneNo ="91 922AB22244";
+        boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+        Assert.assertEquals(false,validity_check);
+    }
+    @Test
+    public void givenPhoneNumber_whenSplCharGiven_whenInvalid_shouldReturnTrue(){
+        UserLoginMain userLoginMain = new UserLoginMain();
+        String phoneNo ="91 922!@22244";
+        boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+        Assert.assertEquals(false,validity_check);
+    }
+
+
 
 
 
