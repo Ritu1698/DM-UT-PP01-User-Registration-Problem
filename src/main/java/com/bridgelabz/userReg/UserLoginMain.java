@@ -48,6 +48,18 @@ public class UserLoginMain {
             return false;
     }
 
+    public  static  boolean EmailValidator(String email)
+    {
+        String y = "^[a-zA-Z]+([._+-]{0,1}[a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[(com)|(co)|(net)]+(?:\\.[a-z]{2,}){0,1}$";
+        Pattern pattern = Pattern.compile(y);
+        Matcher matcher =  pattern.matcher(email);
+        if(matcher.find())
+            return true;
+        else
+            return false;
+
+    }
+
 
 
 
