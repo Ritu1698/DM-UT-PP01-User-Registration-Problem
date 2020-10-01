@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.userReg.EmailLoginTest" tests="22" skipped="0" failures="0" errors="0" timestamp="2020-09-30T17:28:54" hostname="LAPTOP-RGI87V6B" time="0.022">
+<testsuite name="com.bridgelabz.userReg.EmailLoginTest" tests="22" skipped="0" failures="0" errors="0" timestamp="2020-10-01T03:28:21" hostname="LAPTOP-RGI87V6B" time="0.041">
   <properties/>
   <testcase name="givenEmail_whenValid_shouldReturnTrue[0]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.003"/>
   <testcase name="givenEmail_whenValid_shouldReturnTrue[1]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
-  <testcase name="givenEmail_whenValid_shouldReturnTrue[2]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
+  <testcase name="givenEmail_whenValid_shouldReturnTrue[2]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.001"/>
   <testcase name="givenEmail_whenValid_shouldReturnTrue[3]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
   <testcase name="givenEmail_whenValid_shouldReturnTrue[4]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
   <testcase name="givenEmail_whenValid_shouldReturnTrue[5]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
   <testcase name="givenEmail_whenValid_shouldReturnTrue[6]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
   <testcase name="givenEmail_whenValid_shouldReturnTrue[7]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.001"/>
-  <testcase name="givenEmail_whenValid_shouldReturnTrue[8]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
+  <testcase name="givenEmail_whenValid_shouldReturnTrue[8]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.001"/>
   <testcase name="givenEmail_whenValid_shouldReturnTrue[9]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.006"/>
-  <testcase name="givenEmail_whenValid_shouldReturnTrue[10]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
-  <testcase name="givenEmail_whenValid_shouldReturnTrue[11]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.001"/>
-  <testcase name="givenEmail_whenValid_shouldReturnTrue[12]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
+  <testcase name="givenEmail_whenValid_shouldReturnTrue[10]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.001"/>
+  <testcase name="givenEmail_whenValid_shouldReturnTrue[11]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.004"/>
+  <testcase name="givenEmail_whenValid_shouldReturnTrue[12]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.001"/>
   <testcase name="givenEmail_whenValid_shouldReturnTrue[13]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.001"/>
-  <testcase name="givenEmail_whenValid_shouldReturnTrue[14]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
-  <testcase name="givenEmail_whenValid_shouldReturnTrue[15]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.001"/>
+  <testcase name="givenEmail_whenValid_shouldReturnTrue[14]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.001"/>
+  <testcase name="givenEmail_whenValid_shouldReturnTrue[15]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.002"/>
   <testcase name="givenEmail_whenValid_shouldReturnTrue[16]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
-  <testcase name="givenEmail_whenValid_shouldReturnTrue[17]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
+  <testcase name="givenEmail_whenValid_shouldReturnTrue[17]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.001"/>
   <testcase name="givenEmail_whenValid_shouldReturnTrue[18]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
-  <testcase name="givenEmail_whenValid_shouldReturnTrue[19]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.001"/>
+  <testcase name="givenEmail_whenValid_shouldReturnTrue[19]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
   <testcase name="givenEmail_whenValid_shouldReturnTrue[20]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
   <testcase name="givenEmail_whenValid_shouldReturnTrue[21]" classname="com.bridgelabz.userReg.EmailLoginTest" time="0.0"/>
   <system-out><![CDATA[INVALID_EMAIL Invalid email

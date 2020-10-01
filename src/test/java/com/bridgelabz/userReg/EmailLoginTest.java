@@ -21,22 +21,22 @@ public class EmailLoginTest {
     @Parameters
     public static Collection input() {
 
-        return Arrays.asList(new Object[]{"abc@yahoo.com","abc-100@yahoo.com","abc.100@yahoo.com",
+        return Arrays.asList("abc@yahoo.com","abc-100@yahoo.com","abc.100@yahoo.com",
                 "abc-100@abc.net","abc111@abc.com","abc.100@abc.com.au",
                 "abc@1.com","abc@gmail.com.com","abc+100@gmail.com",
                 "abc","abc@.com.my","abc123@gmail.a",
                 "abc()*@gmail.com","abc@%*.com",".abc@abc.com",
                 "abc.@gmail.com","abc@abc@gmail.com","abc@gmail.com.1a",
-                "abc123@.com","abc123@.com.com","abc-100@yahoo.com","abc@gmail.com.aa.au"});
+                "abc123@.com","abc123@.com.com","abc-100@yahoo.com","abc@gmail.com.aa.au");
     }
 
     @Test
     public void givenEmail_whenValid_shouldReturnTrue(){
 
         try {
-            UserLoginMain userLoginMain= new UserLoginMain();
+            UserLoginMain userLoginMain = new UserLoginMain();
             boolean validity_check= userLoginMain.EmailValidator(this.email);
-            Assert.assertEquals(true,validity_check);
+            Assert.assertTrue(validity_check);
 
         }
         catch (UserLoginMainException e)
