@@ -10,7 +10,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname = "Rituparna";
-            boolean validity_check= userLoginMain.FirstNameValidator(firstname);
+            boolean validity_check= userLoginMain.firstname.validate(firstname);
             Assert.assertEquals(true,validity_check);
         }
         catch (UserLoginMainException e)
@@ -28,7 +28,7 @@ public class UserLoginTest {
         {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname = "";
-            boolean validity_check= userLoginMain.FirstNameValidator(firstname);
+            boolean validity_check= userLoginMain.firstname.validate(firstname);
 
         }
         catch (UserLoginMainException e)
@@ -44,7 +44,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname = null;
-            boolean validity_check= userLoginMain.FirstNameValidator(firstname);
+            boolean validity_check= userLoginMain.firstname.validate(firstname);
 
         }
         catch (UserLoginMainException e)
@@ -60,7 +60,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname1 = "Ri";
-            boolean validity_check1= userLoginMain.FirstNameValidator(firstname1);
+            boolean validity_check1= userLoginMain.firstname.validate(firstname1);
             Assert.assertEquals(true, validity_check1);
         }
         catch (UserLoginMainException e)
@@ -76,7 +76,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname ="rituparna";
-            boolean validity_check= userLoginMain.FirstNameValidator(firstname);
+            boolean validity_check= userLoginMain.firstname.validate(firstname);
             Assert.assertEquals(true,validity_check);
         }
         catch (UserLoginMainException e)
@@ -92,7 +92,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname = "R1tu";
-            boolean validity_check = userLoginMain.FirstNameValidator(firstname);
+            boolean validity_check = userLoginMain.firstname.validate(firstname);
             Assert.assertEquals(true, validity_check);
         }
 
@@ -109,7 +109,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname = "R!tu";
-            boolean validity_check = userLoginMain.FirstNameValidator(firstname);
+            boolean validity_check = userLoginMain.firstname.validate(firstname);
             Assert.assertEquals(true, validity_check);
         }
 
@@ -126,7 +126,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname = "RiTu";
-            boolean validity_check = userLoginMain.FirstNameValidator(firstname);
+            boolean validity_check = userLoginMain.firstname.validate(firstname);
             Assert.assertEquals(true, validity_check);
         } catch (UserLoginMainException e) {
             System.out.println(e.ex + " " + e.getMessage());
@@ -142,7 +142,7 @@ public class UserLoginTest {
         {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname = "Biswas";
-            boolean validity_check= userLoginMain.LastNameValidator(firstname);
+            boolean validity_check= userLoginMain.lastname.validate(firstname);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -159,7 +159,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname = "";
-            boolean validity_check= userLoginMain.LastNameValidator(firstname);
+            boolean validity_check= userLoginMain.lastname.validate(firstname);
 
 
         }
@@ -176,7 +176,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname = "Bi";
-            boolean validity_check= userLoginMain.LastNameValidator(firstname);
+            boolean validity_check= userLoginMain.lastname.validate(firstname);
 
         }
         catch (UserLoginMainException e)
@@ -192,7 +192,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname = "Bi";
-            boolean validity_check= userLoginMain.LastNameValidator(firstname);
+            boolean validity_check= userLoginMain.lastname.validate(firstname);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -209,7 +209,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname ="biswas";
-            boolean validity_check= userLoginMain.LastNameValidator(firstname);
+            boolean validity_check= userLoginMain.lastname.validate(firstname);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -226,7 +226,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname ="B1swas";
-            boolean validity_check= userLoginMain.LastNameValidator(firstname);
+            boolean validity_check= userLoginMain.lastname.validate(firstname);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -243,7 +243,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname ="B!swas";
-            boolean validity_check= userLoginMain.LastNameValidator(firstname);
+            boolean validity_check= userLoginMain.lastname.validate(firstname);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -260,7 +260,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String firstname ="BiSwas";
-            boolean validity_check= userLoginMain.LastNameValidator(firstname);
+            boolean validity_check= userLoginMain.lastname.validate(firstname);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -279,7 +279,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String phoneNo ="91 9223322244";
-            boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+            boolean validity_check= userLoginMain.phonenumber.validate(phoneNo);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -296,7 +296,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String phoneNo = null;
-            boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+            boolean validity_check= userLoginMain.phonenumber.validate(phoneNo);
 
 
         }
@@ -313,7 +313,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String phoneNo = "";
-            boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+            boolean validity_check= userLoginMain.phonenumber.validate(phoneNo);
 
 
         }
@@ -329,7 +329,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String phoneNo ="9223322244";
-            boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+            boolean validity_check= userLoginMain.phonenumber.validate(phoneNo);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -346,7 +346,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String phoneNo ="919223322244";
-            boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+            boolean validity_check= userLoginMain.phonenumber.validate(phoneNo);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -363,7 +363,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String phoneNo ="91  9223322244";
-            boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+            boolean validity_check= userLoginMain.phonenumber.validate(phoneNo);
             Assert.assertEquals(true,validity_check);
         }
         catch (UserLoginMainException e)
@@ -379,7 +379,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String phoneNo ="91 92233222";
-            boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+            boolean validity_check= userLoginMain.phonenumber.validate(phoneNo);
             Assert.assertEquals(true,validity_check);
         }
         catch (UserLoginMainException e)
@@ -395,7 +395,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String phoneNo ="91 922332224455";
-            boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+            boolean validity_check= userLoginMain.phonenumber.validate(phoneNo);
             Assert.assertEquals(true,validity_check);
         }
         catch (UserLoginMainException e)
@@ -411,7 +411,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String phoneNo ="91 922AB22244";
-            boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+            boolean validity_check= userLoginMain.phonenumber.validate(phoneNo);
             Assert.assertEquals(true,validity_check);
         }
         catch (UserLoginMainException e)
@@ -427,7 +427,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String phoneNo ="91 922!@22244";
-            boolean validity_check= userLoginMain.PhoneNumberValidator(phoneNo);
+            boolean validity_check= userLoginMain.phonenumber.validate(phoneNo);
             Assert.assertEquals(true,validity_check);
         }
         catch (UserLoginMainException e)
@@ -445,7 +445,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String password ="InDiA@123";
-            boolean validity_check= userLoginMain.PasswordValidator(password);
+            boolean validity_check= userLoginMain.password.validate(password);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -462,7 +462,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String password = null;
-            boolean validity_check= userLoginMain.PasswordValidator(password);
+            boolean validity_check= userLoginMain.password.validate(password);
 
         }
         catch (UserLoginMainException e)
@@ -479,7 +479,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String password ="";
-            boolean validity_check= userLoginMain.PasswordValidator(password);
+            boolean validity_check= userLoginMain.password.validate(password);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -496,7 +496,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String password ="InDi@1";
-            boolean validity_check= userLoginMain.PasswordValidator(password);
+            boolean validity_check= userLoginMain.password.validate(password);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -512,7 +512,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String password ="india@123";
-            boolean validity_check= userLoginMain.PasswordValidator(password);
+            boolean validity_check= userLoginMain.password.validate(password);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -529,7 +529,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String password ="India123";
-            boolean validity_check= userLoginMain.PasswordValidator(password);
+            boolean validity_check= userLoginMain.password.validate(password);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -547,7 +547,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String password ="India@#123";
-            boolean validity_check= userLoginMain.PasswordValidator(password);
+            boolean validity_check= userLoginMain.password.validate(password);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -564,7 +564,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String password ="India@home";
-            boolean validity_check= userLoginMain.PasswordValidator(password);
+            boolean validity_check= userLoginMain.password.validate(password);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -581,7 +581,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String password ="@jhkgkjhjgj";
-            boolean validity_check= userLoginMain.PasswordValidator(password);
+            boolean validity_check= userLoginMain.password.validate(password);
             Assert.assertEquals(true,validity_check);
 
         }
@@ -600,7 +600,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String email = null;
-            boolean validity_check= userLoginMain.EmailValidator(email);
+            boolean validity_check= userLoginMain.email.validate(email);
 
         }
         catch (UserLoginMainException e)
@@ -617,7 +617,7 @@ public class UserLoginTest {
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
             String email = "";
-            boolean validity_check= userLoginMain.EmailValidator(email);
+            boolean validity_check= userLoginMain.email.validate(email);
 
         }
         catch (UserLoginMainException e)

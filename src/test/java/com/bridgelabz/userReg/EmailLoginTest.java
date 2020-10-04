@@ -35,7 +35,7 @@ public class EmailLoginTest {
 
         try {
             UserLoginMain userLoginMain = new UserLoginMain();
-            boolean validity_check= userLoginMain.EmailValidator(this.email);
+            boolean validity_check= userLoginMain.email.validate(this.email);
             Assert.assertTrue(validity_check);
 
         }

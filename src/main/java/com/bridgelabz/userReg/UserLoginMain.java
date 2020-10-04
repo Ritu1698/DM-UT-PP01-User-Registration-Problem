@@ -2,6 +2,11 @@ package com.bridgelabz.userReg;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@FunctionalInterface
+interface IValidatorFunction{
+    boolean validate(String userInfo) throws UserLoginMainException;
+}
+
 public class UserLoginMain {
 
     public static void checkForNullEmptyCase(String name) throws UserLoginMainException {
@@ -18,82 +23,73 @@ public class UserLoginMain {
         }
     }
 
-    public static boolean FirstNameValidator(String name) throws UserLoginMainException {
-
-        checkForNullEmptyCase(name);
-
+    IValidatorFunction firstname = (userInfo) -> {
+        checkForNullEmptyCase(userInfo);
         String y="^[A-Z]{1}[a-z]{2,}$";
         Pattern pattern = Pattern.compile(y);
-        Matcher matcher =  pattern.matcher(name);
+        Matcher matcher =  pattern.matcher(userInfo);
 
         if (!matcher.find()) {
             throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_FIRST_NAME,"Invalid First Name");
 
         }
         return true;
-    }
+    };
 
-    public static boolean LastNameValidator(String name) throws UserLoginMainException {
-
-        checkForNullEmptyCase(name);
-
+    IValidatorFunction lastname = (userInfo) -> {
+        checkForNullEmptyCase(userInfo);
         String y="^[A-Z]{1}[a-z]{2,}$";
         Pattern pattern = Pattern.compile(y);
-        Matcher matcher =  pattern.matcher(name);
+        Matcher matcher =  pattern.matcher(userInfo);
         if (!matcher.find()) {
             throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_LAST_NAME,"Invalid Last Name");
 
         }
         return true;
 
-    }
+    };
 
-    public static boolean PhoneNumberValidator(String number) throws UserLoginMainException {
-
-        checkForNullEmptyCase(number);
-
+    IValidatorFunction phonenumber = (userInfo) -> {
+        checkForNullEmptyCase(userInfo);
         String y="^\\d{2}(\\s{1}\\d{10})$";
         Pattern pattern = Pattern.compile(y);
-        Matcher matcher =  pattern.matcher(number);
+        Matcher matcher =  pattern.matcher(userInfo);
         if(!matcher.find())
         {
             throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_NUMBER,"Invalid number");
         }
         return true;
+    };
 
-    }
-
-    public static boolean PasswordValidator(String password) throws UserLoginMainException {
-
-      checkForNullEmptyCase(password);
+    IValidatorFunction password = (userInfo) -> {
+       checkForNullEmptyCase(userInfo);
 
         String y="^(?=.*[A-Z])(?=.*\\d)(?=.*[^\\dA-Z]).{8,}$";
         String y1="^[0-9a-zA-Z]*[@#$%][0-9a-zA-Z]*$";
         Pattern pattern = Pattern.compile(y);
         Pattern pattern1 = Pattern.compile(y1);
-        Matcher matcher =  pattern.matcher(password);
-        Matcher matcher1 =  pattern1.matcher(password);
+        Matcher matcher =  pattern.matcher(userInfo);
+        Matcher matcher1 =  pattern1.matcher(userInfo);
         if(!(matcher.find()&&matcher1.find()))
         {
             throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_PASS,"Invalid passwd");
         }
         return true;
-    }
 
-    public static boolean EmailValidator(String email) throws UserLoginMainException {
+    };
 
-       checkForNullEmptyCase(email);
-
+    IValidatorFunction email = (userInfo) -> {
+        checkForNullEmptyCase(userInfo);
         String y = "^[a-zA-Z]+([._+-]{0,1}[a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[(com)|(co)|(net)]+(?:\\.[a-z]{2,}){0,1}$";
         Pattern pattern = Pattern.compile(y);
-        Matcher matcher =  pattern.matcher(email);
+        Matcher matcher =  pattern.matcher(userInfo);
 
 
         if(!matcher.find()){
             throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_EMAIL,"Invalid email");
         }
         return true;
+    };
 
-    }
 
 }
