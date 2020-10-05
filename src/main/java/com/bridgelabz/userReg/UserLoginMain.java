@@ -30,7 +30,7 @@ public class UserLoginMain {
         Matcher matcher =  pattern.matcher(userInfo);
 
         if (!matcher.find()) {
-            throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_FIRST_NAME,"Invalid First Name");
+            throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_FIRST_NAME,"Entered Invalid Firstname");
 
         }
         return true;
@@ -42,7 +42,7 @@ public class UserLoginMain {
         Pattern pattern = Pattern.compile(y);
         Matcher matcher =  pattern.matcher(userInfo);
         if (!matcher.find()) {
-            throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_LAST_NAME,"Invalid Last Name");
+            throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_LAST_NAME,"Entered Invalid Lastname");
 
         }
         return true;
@@ -56,7 +56,7 @@ public class UserLoginMain {
         Matcher matcher =  pattern.matcher(userInfo);
         if(!matcher.find())
         {
-            throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_NUMBER,"Invalid number");
+            throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_NUMBER,"Entered Invalid Phone Number");
         }
         return true;
     };
@@ -72,7 +72,7 @@ public class UserLoginMain {
         Matcher matcher1 =  pattern1.matcher(userInfo);
         if(!(matcher.find()&&matcher1.find()))
         {
-            throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_PASS,"Invalid passwd");
+            throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_PASS,"Entered Invalid Password");
         }
         return true;
 
@@ -86,7 +86,7 @@ public class UserLoginMain {
 
 
         if(!matcher.find()){
-            throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_EMAIL,"Invalid email");
+            throw new UserLoginMainException(UserLoginMainException.ExceptionType.INVALID_EMAIL,"Entered Invalid Email");
         }
         return true;
     };
